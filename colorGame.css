@@ -1,0 +1,64 @@
+body{
+	background-color: black;
+	margin:0;
+	font-family:  "Monserrat", "Avenir";
+}
+
+button:hover{
+	background-color: steelblue;
+	color:white;
+}
+h1{
+	color: red;
+	background-color: steelblue;
+	text-align: center;
+	margin:0;
+	font-weight: normal;
+	text-transform: uppercase;
+}
+#rgb{
+	font-size:200%;
+}
+.selected{
+	background-color: steelblue;
+	color:white;
+}
+
+#difficulty:hover{
+	background-color:blue;
+}
+#rgb{
+	width:20%;
+}
+button{
+	font-family:  "Monserrat", "Avenir";
+	border:none;
+	display:inline-block;
+	text-transform: uppercase;
+	color:steelblue;
+	font-size: inherit;
+	float:left;
+	transition: all .5s;
+	height:30px;
+}
+#stripe{
+	background-color:white;
+	text-align: center;
+	height:30px;
+}
+.square{
+	border-radius:25px;
+	background-color: red;
+	width:30%;
+  	padding-bottom: 30%;
+  	float:right;
+  	margin: 1.6%;
+  	transition: all .3s;
+}
+#container{
+  width:50%;
+  margin : 0 auto;
+}
+.main{
+	background-color:blue;
+}
