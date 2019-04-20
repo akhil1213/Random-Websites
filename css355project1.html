@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>iOS Swift</title>
+	<link rel="shortcut icon" href="iosimage.png">
+	<style>
+		#top{
+			text-align : center;
+			color:blue;
+			background-color : black;
+			position:sticky;
+			top:0;
+    		width:100%;
+		}
+		body{
+			background-color:gray;
+		}
+		.bodyparagraphs{
+			text-align: center;
+			border-left: 5px solid #1C6EA4;
+			width:97%;
+			color: rgb(244, 170, 66);
+			font-size: 20px;
+		}
+		table {
+		  table-layout: fixed;
+		  width: 100%;
+		  border-collapse: separate;
+		  border: 3px solid blue;
+		}
+		td{
+			color: rgb(244, 170, 66);
+		}
+		#toprow{
+			background-image: url("swiftflick.png")
+
+		}
+		thead th {
+		  font-family: 'Rock Salt', cursive;
+		}
+		th {
+		  letter-spacing: 2px;
+		}
+		tbody td {
+		  text-align: center;
+		}
+		tbody tr:nth-of-type(even){
+			background-color: #52527a;
+		}
+		tbody tr:nth-of-type(odd){
+			background-color: #5c5c8a;
+		}
+		caption {
+		  font-family: 'Rock Salt';
+		  padding: 20px;
+		  font-style: italic;
+		  caption-side: top;
+		  color: black;
+		  text-align: right;
+		  letter-spacing: 1px;
+		}
+		#helloWorld {
+		  color: rgb(244, 170, 66);
+		  overflow: hidden; /* Ensures the content is not revealed until the animation */
+		  white-space: nowrap; /* Keeps the content on a single line */
+		  /*margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+		  letter-spacing: .15em; /* Adjust as needed */
+		  animation: 
+		    typing 5.5s steps(40, end),
+		    blink-caret .75s step-end infinite;
+		    animation-iteration-count: 200;
+		}
+		@keyframes typing {
+		  from { width: 0 }
+		  to { width: 100% }
+		}
+		#iphoneimg{
+			float:right;
+			height:175px;
+			width:7%;
+		}
+		p{
+			line-height: 1.6;
+		}
+		h3,h4,figcaption{
+			font-weight: bold;
+			color: black;
+  			text-shadow: 2px 2px rgb(244, 170, 66);
+  			text-align: left;
+		}
+		figure{
+			float: left;
+		}
+		figcaption{
+			caption-side: top;
+		}
+		#gesture{
+			margin-top: 300px;
+		}
+		#table{float:right;}
+		#nsmanaged{
+			margin-top: 10px;
+		}
+		#mediator{
+			margin-top:270px;
+		}
+		#transition{
+			margin-top: 90px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div id = "top">
+			<h1>iOS/Swift</h1>
+		</div>
+		<div id = "developing">
+		<h3>Why I chose to develop iOS applications</h3>
+				<img id = "iphoneimg" src = "iphonepic.png" height = "20%">
+				<p class = "bodyparagraphs">
+				As a kid I was always surrounded by Apple devices such as iPhones and iPads. As most young kids, I would always be intrigued on how things worked and were designed. Using apple devices led me to be curious on how iOS applications functioned and would allow my phone to do what it did. The curiousity of iOS helped me develop a passion for computer programing as well. A dream of mine is to make a iOS application thats world-widely used. Having that feeling of creating something that changed the world would be amazing.
+				</p>
+		</div>
+		<div id = "transition">
+			<hr>
+			<h3>How Swift allows you to transition from one view to another</h3>
+			<div id = "segues">
+			<p class = "bodyparagraphs">Something I never thought about when using a iOS application was how the phone knows to switch between one page to another. For example, when you log onto snapchat, the view automatically changes to a view consisting of all your messages. This is done by <b>performing segues</b>. The example below is from a chat app I made. There are many segues being performed from view 1 to view 2. Clicking the register button would 
+			initiate a segue between view 1 and view 2 resulting in view 2 to be displayed.
+			</p>
+			<figure>
+				<img height = "220px" width = "200px" src = "segueimg2.png">
+				<figcaption>View 1</figcaption>
+			</figure>
+			<figure>
+				<img height = "200px" width = "200px" src = "arrowimg.jpg">
+			</figure>
+			<figure>
+				<img height = "220px" width = "200px" src = "segueimg1.png">
+				<figcaption>View 2</figcaption>
+			</figure>
+			</div>
+		</div>
+			<div id = "gesture">
+				<hr>
+				<h3>How Swift allows you to add tapping/swiping gestures</h3>
+				<p class = "bodyparagraphs">One of the most appealing functionalities of an iPhone (any phone in general) is to be able to swipe and tap. I remember first using an iPhone and features like this were most interesting to me. When you touch the screen of an iPhone you usually want some function to occur. Swift makes this happen by using something called a <b>gesture-recognizer</b>. This function takes two parameters, the first parameter tells the Swift whats being tapped, and the second parameter is the code you want to run when a user taps.</p><br>
+				<p id = "helloWorld">let gesture = UITapGestureRecognizer(target: self, action: #selector(userTapped))</p>
+			</div>
+			<hr>
+			<h3>Core Data (iOS framework to save Data)</h3>
+			<table width = "200px">
+				<caption>Synonyms between OOP, Core Data, and DataBases</caption>
+				<thead>
+					<tr id = "toprow">
+						<th>Object Oriented Programming World</th>
+						<th>Core Data World</th>
+						<th>Data Base World</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Class</td>
+						<td>Entity</td>
+						<td>Table</td>
+					</tr>
+					<tr>
+						<td>Property</td>
+						<td>Attribute</td>
+						<td>Field</td>
+					</tr>
+					<tr>
+						<td>Instance</td>
+						<td><b>NSManagedObject</b></td>
+						<td>Tuple/Row</td>
+					</tr>
+
+				</tbody>
+			</table>
+			<div id = "nsmanaged">
+				<figure>
+				<img height = "220px" width = "200px" src = "tableimg.png">
+			</figure>
+			<figure>
+				<img height = "200px" width = "200px" src = "arrowimg.jpg">
+			</figure>
+			<figure>
+				<img height = "220px" width = "200px" src = "persistentcontainer.png">
+			</figure>
+			<figure>
+				<img height = "220px" width = "200px" src = "context.png">
+			</figure>
+			</div>
+			<p id = "mediator" class = "bodyparagraphs">Core Data would save all the entities from your applications code into a<b> persistant container.</b>We then use a context which acts like a mediator between our application and the persistent container. The context is a temporary area where you can make changes to the database. The changes you can make to the database are <abbr title = "Create Read Update Destroy">CRUD</abbr> creating more data, reading the data, updating data, and destroying data. Once you're happy with the changes you made with the data, you then can run the code below which will update the changes you made to the persistent container.<p id = "helloWorld"> try context.save()</p> </p>
+			<p class = "bodyparagraphs">This process is similar to git because you first add the changes you wanted to make to your project and then when you're sure about the changes you've made, you then use a commit command when your happy with the changes.</p>	
+
+			<!-- <table>
+				<caption>Advantages and Disadvantages of Swift</caption>
+				<thead>
+					<tr id = "toprow">
+						<th>Positive</th>
+						<th>Negative</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Easy to read and maintain code by using a "// TODO:" comment which allows you to jump to a specific part of your code. Many Integrated development environment's don't have this neat tool</td>
+						<td>Sizing constraints because each phone has different screen sizes.</td>
+					</tr>
+					<tr>
+						<td>Easy to connect the front-end to the back-end using xcode</td>
+						<td>Designing iOS applications is tough to get accustomed to.</td>
+					</tr>
+					<tr>
+						<td>It's not necessary to end statements with a semicolon in Swift</td>
+						<td>Sizing constraints because each phone has different screen sizes.</td>
+					</tr>
+					<tr>
+						<td>You can experiment with Swift code in an interactive environment called "Playgrounds"</td>
+						<td>Sizing constraints because each phone has different screen sizes.</td>
+					</tr>
+				</tbody>
+			</table> -->
+		</div>
+	</div>
+</body>
+</html>
