@@ -48,7 +48,6 @@
               console.log(colorRGB);
               squares[i].style.backgroundColor =  colorRGB;
               squares[i].addEventListener("click", function(){
-                console.log("someshit");
                 console.log(choosen);
                 console.log(this.style.backgroundColor);
                 if(this.style.backgroundColor == choosen){
